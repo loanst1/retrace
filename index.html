@@ -1,133 +1,586 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ReTrace — Cognitive rehabilitation, in your language</title>
-<meta name="description" content="ReTrace is a multilingual cognitive rehabilitation app from Ansteyapps, supporting adults recovering from stroke, brain injury and other neurological conditions. Memory, attention, executive function and processing speed — in your language, on every device." />
-<link rel="canonical" href="https://retracerehab.com/" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta property="og:title" content="ReTrace — Cognitive rehabilitation, in your language" />
-<meta property="og:description" content="Memory, attention, executive function and processing speed. Evidence-informed, localised in 17 languages." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://retracerehab.com/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReTrace — Cognitive Rehabilitation | Ansteyapps</title>
+<meta name="description" content="ReTrace — multilingual cognitive rehabilitation for adults recovering from stroke, brain injury and other neurological conditions. Six domains, ten levels each, in 17 languages.">
+<meta property="og:title" content="ReTrace — Cognitive Rehabilitation | Ansteyapps">
+<meta property="og:description" content="Multilingual cognitive rehabilitation for adults recovering from stroke, brain injury and other neurological conditions. Six domains, ten levels each, in 17 languages.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://retracerehab.com/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2e5a6e">
+<link rel="canonical" href="https://retracerehab.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--cream:#f5f1e8;--surface:#fbf9f2;--ink:#211d18;--muted:#6b6357;--line:#ddd5c4;--petrol:#2e5a6e;--petrol-dark:#244a5c;--green:#3f6b52;--ochre:#b85c38;}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
-body{background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;}
-a{color:var(--petrol);}
-a:hover{color:var(--petrol-dark);}
-.wrap{max-width:880px;margin:0 auto;padding:32px 22px 60px;}
-header{display:flex;align-items:center;gap:12px;margin-bottom:48px;}
-.mark{width:38px;height:38px;flex:none;}
-.word{font-family:'Fraunces',serif;font-weight:600;font-size:24px;letter-spacing:-0.01em;}
-.word .t{color:var(--petrol);}
-nav{margin-left:auto;display:flex;gap:18px;font-size:14.5px;}
-nav a{color:var(--muted);text-decoration:none;}
-nav a:hover{color:var(--petrol);}
-h1{font-family:'Fraunces',serif;font-weight:600;font-size:46px;line-height:1.08;letter-spacing:-0.02em;margin:0 0 18px;max-width:18ch;}
-.lede{font-size:19px;line-height:1.5;max-width:60ch;margin:0 0 36px;color:var(--ink);}
-.muted{color:var(--muted);}
-.hero{padding:6px 0 40px;border-bottom:1px solid var(--line);margin-bottom:48px;}
-.badge{display:inline-block;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--petrol);background:#eaf0f2;border:1px solid #cfe0e5;border-radius:999px;padding:5px 12px;margin-bottom:20px;}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:18px 0 42px;}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;}
-.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin:0 0 6px;color:var(--petrol);}
-.card p{font-size:14.5px;margin:0;line-height:1.5;color:var(--muted);}
-h2{font-family:'Fraunces',serif;font-weight:600;font-size:28px;letter-spacing:-0.01em;margin:48px 0 14px;}
-p{margin:0 0 14px;}
-ul{margin:0 0 18px;padding-left:22px;}
-ul li{margin-bottom:6px;}
-.cta{display:inline-block;font-family:'Inter';font-weight:600;background:var(--petrol);color:var(--surface);text-decoration:none;border-radius:10px;padding:13px 22px;font-size:15.5px;margin-right:10px;}
-.cta:hover{background:var(--petrol-dark);color:var(--surface);}
-.cta.ghost{background:transparent;color:var(--petrol);border:1px solid var(--line);}
-.cta.ghost:hover{border-color:var(--petrol);background:var(--cream);color:var(--petrol);}
-.suite{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:24px 0 40px;}
-.suite h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin:0 0 4px;}
-.suite p{font-size:14.5px;color:var(--muted);margin:0 0 14px;}
-.suite ul{margin:0;padding-left:20px;font-size:15px;}
-.suite ul li{margin-bottom:4px;}
-footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:14px 22px;}
-footer a{color:var(--muted);text-decoration:none;}
-footer a:hover{color:var(--petrol);}
-.disclaimer{font-size:13px;color:var(--muted);background:var(--surface);border-left:3px solid var(--ochre);padding:13px 16px;border-radius:6px;margin:24px 0 0;line-height:1.5;}
-@media(max-width:600px){h1{font-size:34px;}.lede{font-size:17px;}nav{gap:14px;font-size:13.5px;}}
+  :root {
+    --rt-petrol: #2e5a6e;
+    --rt-petrol-light: #3f7388;
+    --rt-petrol-soft: #e6eef2;
+    --ss-green: #1f4f3f;
+    --rw-ochre: #b85c38;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --accent: var(--rt-petrol);
+    --accent-light: var(--rt-petrol-light);
+    --accent-soft: var(--rt-petrol-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 248, 241, 0.92);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--accent); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+    nav ul li.hide-sm { display: none; }
+  }
+
+  /* ─────────── Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(46, 90, 110, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(46, 90, 110, 0.28);
+  }
+  .app-icon-hero svg { width: 60%; height: 60%; }
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--accent);
+    max-width: 800px;
+  }
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .nice-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    border: none;
+  }
+  .nice-tag svg { width: 14px; height: 14px; }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn.primary:hover { background: var(--accent-light); border-color: var(--accent-light); }
+  .btn.secondary { color: var(--accent); border-color: var(--accent); background: transparent; }
+  .btn.secondary:hover { background: var(--accent); color: white; }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Domain cards ─────────── */
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) { .domain-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .domain-grid { grid-template-columns: 1fr; } }
+  .domain-card {
+    background: white;
+    border-radius: 18px;
+    padding: 26px 26px 28px;
+    border: 1px solid var(--line);
+  }
+  .domain-card .d-num {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .domain-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .domain-card p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    margin-bottom: 14px;
+  }
+  .domain-card .d-mode {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .domain-card .d-mode.live { color: var(--rw-ochre); }
+  .domain-card .d-mode.offline { color: var(--ss-green); }
+
+  /* ─────────── Suite cards ─────────── */
+  .suite-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 800px) { .suite-grid { grid-template-columns: 1fr; } }
+  .suite-card {
+    background: var(--cream-warm);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .suite-card .icon-tile {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .suite-card .icon-tile.s { background: var(--ss-green); }
+  .suite-card .icon-tile.r { background: var(--rw-ochre); }
+  .suite-card .icon-tile.t { background: var(--rt-petrol); }
+  .suite-card .icon-tile svg { width: 60%; height: 60%; }
+  .suite-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .suite-card p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    margin-bottom: 12px;
+  }
+  .suite-card .status {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: auto;
+  }
+  .suite-card .status.live { color: var(--ss-green); }
+  .suite-card .status.soon { color: var(--rt-petrol); }
+
+  /* ─────────── Disclaimer box ─────────── */
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+  @media (prefers-reduced-motion: reduce) {
+    .product-hero .hero-meta, .product-hero h1, .product-hero .lede, .product-hero .hero-cta { animation: none; }
+  }
+
+  [dir="rtl"] { text-align: right; }
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-    <circle cx="20" cy="20" r="18" fill="none" stroke="#2e5a6e" stroke-width="2.5" />
-    <path d="M20 2 A18 18 0 0 1 20 38 Z" fill="#2e5a6e" />
-    <circle cx="20" cy="20" r="3.4" fill="#f5f1e8" />
-  </svg>
-  <span class="word">Re<span class="t">Trace</span></span>
-  <nav>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/support.html">Support</a>
-    <a href="/terms.html">Terms</a>
-  </nav>
+
+<nav>
+  <div class="container">
+    <a href="https://ansteyapps.com" class="logo">
+      <span class="first">Anstey</span>
+      <span class="second">Apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="https://ansteyapps.com" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span>Back</span>
+      </a>
+      <ul class="nav-links">
+        <li class="hide-sm"><a href="https://ansteyapps.com/stroke-sight/">Stroke Sight</a></li>
+        <li class="hide-sm"><a href="https://ansteyapps.com/rewrite/">ReWrite</a></li>
+        <li><a href="mailto:clinical@ansteyapps.com">Clinicians</a></li>
+        <li><a href="mailto:hello@ansteyapps.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero" aria-hidden="true">
+        <!-- ReTrace mark: a continuous "trace" path with anchor dots, white on petrol -->
+        <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 42 C 18 24, 28 24, 32 36 S 46 48, 54 28" fill="none"/>
+          <circle cx="10" cy="42" r="3" fill="white" stroke="none"/>
+          <circle cx="32" cy="36" r="3" fill="white" stroke="none"/>
+          <circle cx="54" cy="28" r="3" fill="white" stroke="none"/>
+        </svg>
+      </div>
+      <span class="hero-badge">Cognitive Rehab</span>
+    </div>
+
+    <h1>ReTrace</h1>
+
+    <p class="lede">Multilingual cognitive rehabilitation for adults recovering from stroke, brain injury and other neurological conditions. Six domains spanning working memory, attention, processing speed, executive function, everyday memory and visual memory — with every exercise tied to something real in daily life.</p>
+
+    <div class="hero-cta">
+      <a href="mailto:hello@ansteyapps.com?subject=ReTrace%20early%20access" class="btn primary">Request early access</a>
+      <a href="#domains" class="btn secondary">See what it does</a>
+    </div>
+
+    <span class="nice-tag">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5"/></svg>
+      Coming soon · 2026 · 17 languages
+    </span>
+  </div>
 </header>
 
-<section class="hero">
-  <span class="badge">Coming soon · Ansteyapps</span>
-  <h1>Cognitive rehabilitation, in your language.</h1>
-  <p class="lede">ReTrace helps adults recovering from stroke, brain injury and other neurological conditions practise memory, attention, executive function and processing speed — every exercise tied to something real in daily life.</p>
-  <a class="cta" href="mailto:hello@ansteyapps.com?subject=ReTrace%20early%20access">Request early access</a>
-  <a class="cta ghost" href="https://ansteyapps.com">See the family of apps</a>
+<section id="domains" class="alt">
+  <div class="container">
+    <div class="section-eyebrow">What it does</div>
+    <h2 class="section-title">Six domains. Ten levels each. Tracked independently.</h2>
+    <p class="section-intro">Three offline parametric exercises and three live exercises written fresh in your language each time. Strong areas don't pull weaker ones along — every domain finds its own level.</p>
+    <div class="domain-grid">
+      <div class="domain-card">
+        <div class="d-num">01</div>
+        <h3>Working memory</h3>
+        <p>Holding a phone number, a code or a short list in mind.</p>
+        <div class="d-mode offline">Offline</div>
+      </div>
+      <div class="domain-card">
+        <div class="d-num">02</div>
+        <h3>Attention</h3>
+        <p>Staying focused while distractions happen around you.</p>
+        <div class="d-mode offline">Offline</div>
+      </div>
+      <div class="domain-card">
+        <div class="d-num">03</div>
+        <h3>Processing speed</h3>
+        <p>Thinking and reacting a little faster.</p>
+        <div class="d-mode offline">Offline</div>
+      </div>
+      <div class="domain-card">
+        <div class="d-num">04</div>
+        <h3>Executive function</h3>
+        <p>Planning and ordering everyday tasks, written fresh in your language.</p>
+        <div class="d-mode live">Live · in-language</div>
+      </div>
+      <div class="domain-card">
+        <div class="d-num">05</div>
+        <h3>Everyday memory</h3>
+        <p>Remembering messages, lists and appointments — the differentiator.</p>
+        <div class="d-mode live">Live · in-language</div>
+      </div>
+      <div class="domain-card">
+        <div class="d-num">06</div>
+        <h3>Visual memory</h3>
+        <p>Remembering where things are and what you saw.</p>
+        <div class="d-mode live">Live · in-language</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<h2>What it does</h2>
-<p>Six domains, ten levels each, adapting independently to where you are this week.</p>
-<div class="grid">
-  <div class="card"><h3>Working memory</h3><p>Holding a phone number, a code or a short list in mind.</p></div>
-  <div class="card"><h3>Attention</h3><p>Staying focused while distractions happen around you.</p></div>
-  <div class="card"><h3>Processing speed</h3><p>Thinking and reacting a little faster.</p></div>
-  <div class="card"><h3>Executive function</h3><p>Planning and ordering everyday tasks.</p></div>
-  <div class="card"><h3>Everyday memory</h3><p>Remembering messages, lists and appointments.</p></div>
-  <div class="card"><h3>Visual memory</h3><p>Remembering where things are and what you saw.</p></div>
-</div>
+<section>
+  <div class="container">
+    <div class="section-eyebrow">The Ansteyapps suite</div>
+    <h2 class="section-title">One patient. One report. Every domain.</h2>
+    <p class="section-intro">ReTrace works alongside the rest of the Ansteyapps family — the same person, one progress picture. The view no single-app competitor can put together.</p>
+    <div class="suite-grid">
+      <div class="suite-card">
+        <div class="icon-tile s" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+            <circle cx="32" cy="32" r="22" fill="none"/>
+            <path d="M32 10 A22 22 0 0 1 32 54 Z" fill="white" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Stroke Sight</h3>
+          <p>Eight evidence-based visual field exercises for hemianopia, quadrantanopia, neglect and scotoma.</p>
+        </div>
+        <span class="status live">Live · £29.99</span>
+      </div>
+      <div class="suite-card">
+        <div class="icon-tile r" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 38 C 18 22, 26 50, 34 32 S 50 18, 56 36"/>
+          </svg>
+        </div>
+        <div>
+          <h3>ReWrite</h3>
+          <p>Guided tracing for letters, words and sentences. Post-stroke handwriting, with Parkinson's BIG mode.</p>
+        </div>
+        <span class="status live">Live · £29.99</span>
+      </div>
+      <div class="suite-card">
+        <div class="icon-tile t" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 42 C 18 24, 28 24, 32 36 S 46 48, 54 28" fill="none"/>
+            <circle cx="10" cy="42" r="3" fill="white" stroke="none"/>
+            <circle cx="32" cy="36" r="3" fill="white" stroke="none"/>
+            <circle cx="54" cy="28" r="3" fill="white" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <h3>ReTrace</h3>
+          <p>Cognitive rehabilitation across memory, attention, executive function and processing speed. This app.</p>
+        </div>
+        <span class="status soon">Coming soon · 2026</span>
+      </div>
+    </div>
 
-<h2>Built around how recovery actually works</h2>
-<ul>
-  <li>Every exercise is framed around a daily-life situation, not a puzzle for its own sake.</li>
-  <li>Independent difficulty tracking per domain — strong areas don't pull weaker ones along.</li>
-  <li>Content generated in your language, including Welsh and Irish.</li>
-  <li>High contrast, larger text, reduced motion and spoken instructions, available from day one.</li>
-  <li>Clinician mode: assign only the modules a patient needs, and read the progress report.</li>
-</ul>
-
-<h2>One report, every domain</h2>
-<div class="suite">
-  <h3>The Ansteyapps suite</h3>
-  <p>ReTrace works alongside the other Ansteyapps apps. The same person, one progress picture.</p>
-  <ul>
-    <li><strong>Stroke Sight</strong> — visual rehabilitation after stroke.</li>
-    <li><strong>ReWrite</strong> — handwriting rehabilitation, including Parkinson's BIG.</li>
-    <li><strong>ReTrace</strong> — cognitive rehabilitation (this app).</li>
-  </ul>
-</div>
-
-<h2>For clinicians and organisations</h2>
-<p>ReTrace is designed as a clinical adjunct — a tool that complements care, not a substitute for it. Organisation licensing, clinician dashboards and patient assignment are part of the roadmap. If you'd like a briefing or a pilot, get in touch.</p>
-<p><a href="mailto:hello@ansteyapps.com?subject=ReTrace%20clinical%20enquiry">hello@ansteyapps.com</a></p>
-
-<div class="disclaimer">
-ReTrace is a wellbeing support tool, not a medical device. It is designed to complement, not replace, the care of your clinical team. It does not diagnose, treat or cure any condition.
-</div>
+    <div class="disclaimer-box">
+      <strong>ReTrace is a wellbeing support tool, not a medical device.</strong> It is designed to complement, not replace, the care of your clinical team. It does not diagnose, treat or cure any condition. Always follow the guidance of your rehabilitation team.
+    </div>
+  </div>
+</section>
 
 <footer>
-  <span>© 2026 Ansteyapps Limited</span>
-  <a href="/privacy.html">Privacy</a>
-  <a href="/support.html">Support</a>
-  <a href="/terms.html">Terms</a>
-  <a href="https://ansteyapps.com">Ansteyapps</a>
+  <div class="container">
+    <div>© 2026 Ansteyapps Limited · Company no. 17177054 · Registered in England &amp; Wales</div>
+    <div>
+      Privacy: <a href="privacy.html">ReTrace</a> · <a href="https://ansteyapps.com/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="https://ansteyapps.com/rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      Terms: <a href="terms.html">ReTrace</a> · <a href="https://ansteyapps.com/stroke-sight/terms-of-service.html">Stroke Sight</a> · <a href="https://ansteyapps.com/rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+  </div>
 </footer>
-</div>
+
 </body>
 </html>
