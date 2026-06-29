@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReTrace — Privacy Policy | Ansteyapps</title>
+<meta name="description" content="ReTrace privacy policy. What we collect, what we do not, and how exercise-generation requests work.">
+<meta name="theme-color" content="#2e5a6e">
+<link rel="canonical" href="https://retracerehab.com/privacy-policy.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rt-petrol: #2e5a6e;
+    --rt-petrol-light: #3f7388;
+    --rt-petrol-soft: #e6eef2;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --accent: var(--rt-petrol);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans); background: var(--cream-warm); color: var(--text);
+    line-height: 1.65; font-size: 16px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(46, 90, 110, 0.35); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--accent); }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .container.wide { max-width: 1120px; }
+
+  /* Navigation */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(251, 248, 241, 0.92); backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px); border-bottom: 1px solid var(--line); }
+  nav .container.wide { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; }
+  .logo { font-family: var(--serif); font-size: 20px; letter-spacing: -0.3px; border: none; display: inline-flex; align-items: baseline; gap: 0; color: var(--charcoal); }
+  .logo .first { font-weight: 600; }
+  .logo .second { font-weight: 400; margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+  .back-nav { font-family: var(--sans); font-size: 13px; font-weight: 500; color: var(--muted); border: none; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s; }
+  .back-nav:hover { color: var(--accent); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--charcoal); border: none; letter-spacing: 0.1px; }
+  nav ul a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    nav ul { gap: 16px; } nav ul a { font-size: 13px; } .nav-right { gap: 16px; }
+    nav ul li.hide-sm { display: none; }
+  }
+
+  /* Page */
+  .page-head { padding: 64px 0 32px; }
+  .page-head .eyebrow {
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .page-head h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.05; letter-spacing: -1.2px; color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+  .page-head .updated {
+    font-size: 14px; color: var(--muted);
+  }
+  main { padding: 0 0 80px; }
+  main h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 24px; letter-spacing: -0.4px;
+    color: var(--charcoal); margin: 40px 0 12px;
+  }
+  main p, main li { font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 14px; }
+  main ul, main ol { margin: 0 0 18px 22px; padding: 0; }
+  main li { margin-bottom: 8px; }
+  main strong { color: var(--charcoal); font-weight: 600; }
+  .callout {
+    background: var(--cream); border: 1px solid var(--line);
+    border-left: 3px solid var(--accent); border-radius: 8px;
+    padding: 18px 22px; margin: 24px 0; font-size: 15px; color: var(--charcoal-soft);
+  }
+  .callout strong { color: var(--charcoal); }
+  .toc {
+    background: white; border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 24px; margin: 24px 0 32px;
+  }
+  .toc-title { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .toc ol { margin: 0; padding-left: 22px; }
+  .toc li { margin-bottom: 6px; font-size: 14.5px; }
+
+  /* Footer */
+  footer { background: var(--charcoal); color: rgba(245, 241, 232, 0.6); padding: 40px 0; border-top: 1px solid rgba(245, 241, 232, 0.15); font-size: 13px; line-height: 1.6; }
+  footer .container.wide { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  footer a { color: rgba(245, 241, 232, 0.6); border-bottom-color: rgba(245, 241, 232, 0.2); }
+  footer a:hover { color: var(--cream); border-bottom-color: var(--cream); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container wide">
+    <a href="https://ansteyapps.com" class="logo">
+      <span class="first">Anstey</span><span class="second">Apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="/" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span>Back to ReTrace</span>
+      </a>
+      <ul class="nav-links">
+        <li class="hide-sm"><a href="terms-of-service.html">Terms</a></li>
+        <li><a href="mailto:privacy@ansteyapps.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="page-head">
+  <div class="container">
+    <div class="eyebrow">ReTrace</div>
+    <h1>Privacy policy</h1>
+    <div class="updated">Last updated: 29 June 2026</div>
+  </div>
+</div>
+
+<main>
+<div class="container">
+
+<div class="callout">
+  <strong>The short version.</strong> Your settings, your exercise history and your clinician notes stay on your device. When the app generates a memory, sequencing or visual-memory exercise in your language, it sends three pieces of information to our server — exercise type, language and difficulty level — nothing more. Our server proxies that to Anthropic and returns the generated exercise. No personal data, no answers, no identifying information.
+</div>
+
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#who">Who we are</a></li>
+    <li><a href="#what">What we collect</a></li>
+    <li><a href="#dont">What we do not collect</a></li>
+    <li><a href="#generation">How exercise generation works</a></li>
+    <li><a href="#sub">Sub-processors</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#rights">Your rights (UK GDPR)</a></li>
+    <li><a href="#legal">Legal basis</a></li>
+    <li><a href="#retention">Data retention</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#changes">Changes</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</div>
+
+<h2 id="who">1. Who we are</h2>
+<p>ReTrace is developed and published by <strong>Ansteyapps Limited</strong>, a company registered in England and Wales (company number 17177054, registered office: Abertillery, Wales, United Kingdom). You can contact us at <a href="mailto:privacy@ansteyapps.com">privacy@ansteyapps.com</a>.</p>
+
+<h2 id="what">2. What we collect</h2>
+<p>ReTrace processes the following data:</p>
+<ul>
+  <li><strong>On your device only.</strong> Your settings (language, accessibility preferences, clinician mode), your exercise history (sessions completed, minutes practised, scores, difficulty levels per domain) and any clinician notes you type are stored locally on your device. They never leave it unless you choose to email or print a progress report.</li>
+  <li><strong>Sent to our server for exercise generation.</strong> When you start an exercise that uses generated content (executive sequencing, everyday memory, visual memory), the app sends only three pieces of information to our server: the exercise type (one of three preset values), the target language and the difficulty number (1–10). No personal data, no account information, no scores, no answers, no identifiers of any kind.</li>
+  <li><strong>Account and billing.</strong> If you create an account or subscribe (when subscriptions become available), your email address and a payment processor reference are stored by our subscription provider. We do not see or store your card details.</li>
+</ul>
+
+<h2 id="dont">3. What we do not collect</h2>
+<ul>
+  <li>We do not sell, rent, share or transmit your data to advertisers.</li>
+  <li>We do not include any third-party trackers, advertising SDKs or behavioural analytics in the app.</li>
+  <li>We do not collect health data, diagnoses, identifying medical information, or anything you have not chosen to put into the clinician notes field.</li>
+  <li>We do not log which language or difficulty you selected against any identifier — the generation request is not attributable to you on our server.</li>
+</ul>
+
+<h2 id="generation">4. How exercise generation works</h2>
+<p>Three of the six exercise domains (executive sequencing, everyday memory, visual memory) are written fresh in your chosen language each time you practise. This is the part of the app that uses an external service:</p>
+<ol>
+  <li>Your device sends a request to our Cloudflare Worker at <code>api.retracerehab.com</code>. The body of the request contains only the exercise type, the language and the difficulty number.</li>
+  <li>Our worker holds the Anthropic API key server-side and forwards the request to Anthropic's Claude API.</li>
+  <li>Anthropic returns the generated exercise. Our worker validates the shape and returns it to your device.</li>
+  <li>The exercise runs entirely on your device. Your answers, score and reaction time are not sent anywhere.</li>
+</ol>
+<p>The other three domains (working memory, attention, processing speed) run entirely offline on your device and do not communicate with our servers at all.</p>
+
+<h2 id="sub">5. Sub-processors</h2>
+<p>The following services receive request data — but never personal data — in the course of generating exercises:</p>
+<ul>
+  <li><strong>Cloudflare, Inc.</strong> — operates our worker proxy and handles network transit. Cloudflare's privacy notice is at <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>.</li>
+  <li><strong>Anthropic PBC</strong> — generates the exercise content. Anthropic's privacy notice is at <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a>. Under Anthropic's commercial terms, API inputs and outputs are not used to train their models.</li>
+  <li><strong>Apple Inc., Google LLC, Amazon Web Services Inc.</strong> — distribute the app and process any paid purchases or subscriptions, subject to their own terms.</li>
+</ul>
+
+<h2 id="children">6. Children</h2>
+<p>ReTrace is designed for adults aged 18 and over. It is not directed at children under 13 and does not knowingly collect data from children.</p>
+
+<h2 id="rights">7. Your rights (UK GDPR)</h2>
+<p>You have the right to access, correct, delete or restrict the processing of your personal data, and to object to processing or request data portability. Because ReTrace stores most data on your device, deletion is usually as simple as removing the app or clearing its data via Settings. For account-related requests (once accounts exist), email <a href="mailto:privacy@ansteyapps.com">privacy@ansteyapps.com</a> and we will respond within one calendar month.</p>
+<p>If you are not satisfied with our response, you can lodge a complaint with the Information Commissioner's Office (ICO) — <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+<h2 id="legal">8. Legal basis</h2>
+<p>We process the minimal data described above under the following lawful bases:</p>
+<ul>
+  <li><strong>Legitimate interest</strong> (UK GDPR Article 6(1)(f)) — for the exercise-generation request, where the small, non-identifying payload is necessary to deliver the service you have chosen to use.</li>
+  <li><strong>Consent</strong> (UK GDPR Article 6(1)(a)) — when you create an account or subscribe.</li>
+  <li><strong>Contract</strong> (UK GDPR Article 6(1)(b)) — to provide a paid service you have purchased.</li>
+</ul>
+
+<h2 id="retention">9. Data retention</h2>
+<p>Account data, when accounts exist, is kept while your account is active and deleted within 30 days of account closure. The exercise-generation request and response are not logged with any identifier and are not retained beyond the time needed to fulfil the request. On-device data is retained until you remove the app or clear its data.</p>
+
+<h2 id="security">10. Security</h2>
+<p>The Anthropic API key is held server-side as a Cloudflare Workers secret and is never exposed to clients. All communication between the app, our server and Anthropic uses HTTPS. On-device data is stored within the app's sandbox (iOS Keychain / Android encrypted storage where applicable).</p>
+
+<h2 id="changes">11. Changes</h2>
+<p>If we change this policy we will update the "Last updated" date above and, for material changes, notify you in the app or by email if you have an account.</p>
+
+<h2 id="contact">12. Contact</h2>
+<p>If you have any questions about this policy, write to us:</p>
+<p>
+  <strong>Ansteyapps Limited</strong><br>
+  Company no. 17177054<br>
+  Abertillery, Wales, United Kingdom<br>
+  <a href="mailto:privacy@ansteyapps.com">privacy@ansteyapps.com</a>
+</p>
+
+</div>
+</main>
+
+<footer>
+  <div class="container wide">
+    <div>© 2026 Ansteyapps Limited · Company no. 17177054 · Registered in England &amp; Wales</div>
+    <div>Privacy: <a href="privacy-policy.html">ReTrace</a> · <a href="https://ansteyapps.com/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="https://ansteyapps.com/rewrite/privacy-policy.html">ReWrite</a></div>
+    <div>Terms: <a href="terms-of-service.html">ReTrace</a> · <a href="https://ansteyapps.com/stroke-sight/terms-of-service.html">Stroke Sight</a> · <a href="https://ansteyapps.com/rewrite/terms-of-service.html">ReWrite</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

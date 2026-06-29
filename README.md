@@ -4,9 +4,8 @@ Holding site for ReTrace — Ansteyapps cognitive rehabilitation app.
 
 ## Pages
 - `index.html` — landing + early access
-- `privacy.html` — UK GDPR privacy policy
-- `support.html` — contact + FAQ
-- `terms.html` — terms of service
+- `privacy-policy.html` — UK GDPR privacy policy (matches family naming)
+- `terms-of-service.html` — terms of service (matches family naming)
 
 ## Deploying
 
